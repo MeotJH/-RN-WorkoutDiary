@@ -1,11 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 
+import MainPage from './src/pageMain';
+import MainHeader from './src/MainHeader';
+import { MyTabs } from './src/Bottom'
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    
+    <NavigationContainer>
+      <MainHeader/>
+      <MyTabs/>
+    </NavigationContainer>
   );
 }
 
